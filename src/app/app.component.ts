@@ -18,7 +18,7 @@ export class AppComponent implements OnInit {
   }
   message: string = '';
 
-  constructor(private data: DuLieuTongService) {}
+  constructor(private data: DuLieuTongService, public routerService: Router) {}
 
   arrProduct = [
     {
@@ -51,15 +51,15 @@ export class AppComponent implements OnInit {
     console.log('abc', this.title);
     this.data.currentMessage.subscribe((message) => (this.message = message));
   }
+
+  navigate(url: string) {
+    // this.routerService.navigate([url]);
+    this.routerService.navigateByUrl(url);
+  }
 }
 
 export class ParentComponent {
   parentMessage: string = 'message from parent';
   title = 'Router';
   constructor(public routerService: Router) {}
-
-  navigate(url: string = '') {
-    // this.routerService.navigate([url]);
-    this.routerService.navigateByUrl(url);
-  }
 }
