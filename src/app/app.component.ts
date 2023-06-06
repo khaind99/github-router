@@ -1,5 +1,6 @@
 import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 import { DuLieuTongService } from './du-lieu-tong.service';
+import { Router } from '@angular/router';
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -54,6 +55,11 @@ export class AppComponent implements OnInit {
 
 export class ParentComponent {
   parentMessage: string = 'message from parent';
+  title = 'Router';
+  constructor(public routerService: Router) {}
 
-  constructor() {}
+  navigate(url: string = '') {
+    // this.routerService.navigate([url]);
+    this.routerService.navigateByUrl(url);
+  }
 }
