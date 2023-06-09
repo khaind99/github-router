@@ -3,10 +3,10 @@ import { BehaviorSubject } from 'rxjs';
 
 @Injectable()
 export class DuLieuTongService {
-  private messageSource = new BehaviorSubject('Default message');
+  private messageSource = new BehaviorSubject('rau dền');
   currentMessage = this.messageSource.asObservable();
 
-  constructor() { }
+  constructor() {}
   changeMessage(message: string) {
     this.messageSource.next(message);
   }
