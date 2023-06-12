@@ -12,7 +12,7 @@ import { RouterModule, Routes } from '@angular/router';
 
 const appRouter: Routes = [
   {
-    path: 'index',
+    path: 'index/:giohang',
     component: GiohangComponent,
   },
   {

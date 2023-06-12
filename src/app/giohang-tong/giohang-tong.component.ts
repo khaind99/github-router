@@ -9,7 +9,8 @@ export class GiohangTongComponent implements OnInit {
 
   constructor() { }
   @Input() tongSL:number =0; 
-  @Input() tongTienGH:number =0;
+  @Input() tongTienGH:number =0 ;
+
   ngOnInit(): void {}
   }
 

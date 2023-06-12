@@ -11,6 +11,7 @@ export class AppComponent implements OnInit {
 
   tongSL: number = 0;
   tongTienGH: number = 0;
+
   ganSL_TT_GH(data = [0, 0]) {
     //giả định component con bắn ra array data có 2 phần từ
     this.tongSL = data[0];
@@ -56,10 +57,4 @@ export class AppComponent implements OnInit {
     // this.routerService.navigate([url]);
     this.routerService.navigateByUrl(url);
   }
-}
-
-export class ParentComponent {
-  parentMessage: string = 'message from parent';
-  title = 'Router';
-  constructor(public routerService: Router) {}
 }
