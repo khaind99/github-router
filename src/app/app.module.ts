@@ -12,16 +12,12 @@ import { RouterModule, Routes } from '@angular/router';
 
 const appRouter: Routes = [
   {
-    path: 'index/:giohang',
-    component: GiohangComponent,
-  },
-  {
     path: 'about',
     component: GiohangTongComponent,
   },
   {
     // khi một router nào được gọi mà không có trong phần appRouter thì NotFoundComponent được gọi ra
-    path: '**',
+    path: '*',
     component: ChildComponent,
   },
 ];

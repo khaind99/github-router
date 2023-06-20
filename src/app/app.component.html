@@ -80,26 +80,24 @@
   </table>
 </div>
 
-<button
+<!-- <button
   type="button"
   class="btn btn-outline-primary"
   onclick="window.location.href='/src/child/child.component.html'"
 >
   Click
 </button>
-<button type="button" class="btn btn-outline-secondary">Free</button>
+<button type="button" class="btn btn-outline-secondary">Free</button> -->
 
-<app-child></app-child>
-
-<app-giohang-tong
-  [tongSL]="tongSL"
-  [tongTienGH]="tongTienGH"
-></app-giohang-tong>
-<br />
-<app-giohang (capnhatGH)="ganSL_TT_GH($event)"></app-giohang>
+<!-- <app-child></app-child> -->
+<app-giohang *ngIf="isClickedAbout"></app-giohang>
 
 <div class="router">
-  <router-outlet ></router-outlet>
+  <router-outlet></router-outlet>
 </div>
-<button type="button" class="btn btn-primary" (click)="navigate('index')">Home</button>
-<button type="button" class="btn btn-success" (click)="navigate('about')">About</button>
+<button type="button" class="btn btn-primary" (click)="clickHome()">
+  Home
+</button>
+<button type="button" class="btn btn-success" (click)="clickAbout()">
+  About
+</button>

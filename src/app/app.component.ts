@@ -8,16 +8,8 @@ import { Router } from '@angular/router';
 })
 export class AppComponent implements OnInit {
   title = 'Em thích ăn Rau';
-
-  tongSL: number = 0;
-  tongTienGH: number = 0;
-
-  ganSL_TT_GH(data = [0, 0]) {
-    //giả định component con bắn ra array data có 2 phần từ
-    this.tongSL = data[0];
-    this.tongTienGH = data[1];
-  }
   message: string = '';
+  isClickedAbout = false;
 
   constructor(private data: DuLieuTongService, public routerService: Router) {}
 
@@ -49,12 +41,21 @@ export class AppComponent implements OnInit {
   ];
 
   ngOnInit() {
-    console.log('abc', this.title);
     this.data.currentMessage.subscribe((message) => (this.message = message));
   }
 
   navigate(url: string) {
     // this.routerService.navigate([url]);
     this.routerService.navigateByUrl(url);
+  }
+
+  clickAbout(): void {
+    this.isClickedAbout = true;
+    this.navigate('about');
+  }
+
+  clickHome(): void {
+    this.isClickedAbout = false;
+    this.navigate('');
   }
 }
