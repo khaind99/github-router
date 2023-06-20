@@ -13,7 +13,6 @@ export class GiohangComponent implements OnInit {
   capnhat() {
     let d = [10, 6000000];
     this.capnhatGH.emit(d); //thông qua EventEmitter bắn value ra cha, lúc này hàm gan_TT_GH trong cha sẽ chạy
-    return (d = [11, 6450000]);
-    this.capnhatGH.emit(d);
+    
   }
 }

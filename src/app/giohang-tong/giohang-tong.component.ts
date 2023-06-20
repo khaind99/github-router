@@ -12,6 +12,7 @@ export class GiohangTongComponent implements OnInit {
   @Input() tongTienGH:number =0 ;
 
   ngOnInit(): void {}
+  
   }
 
 
