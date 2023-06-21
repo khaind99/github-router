@@ -72,7 +72,7 @@
         <td>{{ item.last }}</td>
         <td>{{ item.handle }}</td>
         <td>
-          <img class="image-product" [src]="item.image" />
+          <img class="image-product" [src]="item.image"/>
         </td>
         <td>{{ item.icon }}</td>
       </tr>
@@ -87,17 +87,17 @@
 >
   Click
 </button>
-<button type="button" class="btn btn-outline-secondary">Free</button> -->
+<button type="button" class="btn btn-outline-secondary">Free</button> 
 
-<!-- <app-child></app-child> -->
+   <app-child></app-child> -->
 <app-giohang *ngIf="isClickedAbout"></app-giohang>
 
 <div class="router">
   <router-outlet></router-outlet>
 </div>
 <button type="button" class="btn btn-primary" (click)="clickHome()">
-  Home
+ Ẩn
 </button>
 <button type="button" class="btn btn-success" (click)="clickAbout()">
-  About
+  Hiện
 </button>
