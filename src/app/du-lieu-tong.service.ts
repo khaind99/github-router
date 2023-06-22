@@ -3,7 +3,7 @@ import { BehaviorSubject } from 'rxjs';
 
 @Injectable()
 export class DuLieuTongService {
-  private messageSource = new BehaviorSubject('rau dền');
+  private messageSource = new BehaviorSubject('Nhân Sinh');
   currentMessage = this.messageSource.asObservable();
   private tongTienGH: BehaviorSubject<number> = new BehaviorSubject(0);
   currentTongTienGH = this.tongTienGH.asObservable();

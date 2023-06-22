@@ -8,7 +8,7 @@ import { Router } from '@angular/router';
 })
 export class AppComponent implements OnInit {
   title = 'Em thích ăn Rau';
-  message: string = '';
+  message: string = ''; 
   isClickedAbout = false;
 
   constructor(private data: DuLieuTongService, public routerService: Router) {}
